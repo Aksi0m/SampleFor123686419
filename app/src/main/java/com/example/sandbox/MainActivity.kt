@@ -1,7 +1,10 @@
 package com.example.sandbox
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.annotation.DrawableRes
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,3 +13,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 }
+
+fun Fragment.getCompatDrawable(@DrawableRes drawableRes: Int) = ContextCompat.getDrawable(this.requireContext(), drawableRes)
