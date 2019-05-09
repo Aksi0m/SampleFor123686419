@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".BlankFragment1">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".BlankFragment1">
 
     <TextView
+            android:id="@+id/graphIdContainer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/hello_blank_fragment"/>
 
-</FrameLayout>
+    <Button
+            android:id="@+id/toFLOW1"
+            android:layout_width="match_parent"
+            android:text="TO FLOW 1"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/toFLOW2"
+            android:layout_width="match_parent"
+            android:text="TO FLOW 2"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

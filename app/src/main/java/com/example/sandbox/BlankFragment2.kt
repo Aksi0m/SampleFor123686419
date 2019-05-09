@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.fragment_blank_fragment2.*
 
 class BlankFragment2 : Fragment() {
 
@@ -19,7 +21,15 @@ class BlankFragment2 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        BlankFragment2Directions.actionBlankFragmentToBlankFragment4()
-        BlankFragment1Directions.
+
+        graphIdContainer.text = findNavController().graph.id.toString()
+
+        to3.setOnClickListener {
+            findNavController().navigate(R.id.action_blankFragment2_to_blankFragment3)
+        }
+
+        to4.setOnClickListener {
+            findNavController().navigate(R.id.action_blankFragment_to_blankFragment4)
+        }
     }
 }
