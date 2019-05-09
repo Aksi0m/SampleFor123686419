@@ -24,12 +24,15 @@ class BlankFragment2 : Fragment() {
 
         graphIdContainer.text = findNavController().graph.id.toString()
 
-        to3.setOnClickListener {
-            findNavController().navigate(R.id.action_blankFragment2_to_blankFragment3)
-        }
 
         to4.setOnClickListener {
             findNavController().navigate(R.id.action_blankFragment_to_blankFragment4)
         }
+
+        exitFlow.setOnClickListener {
+            findNavController().navigate(R.id.exitNavigation2)
+        }
+
+
     }
 }
